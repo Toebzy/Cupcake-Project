@@ -15,7 +15,7 @@ class UserMapper
 
         User user = null;
 
-        String sql = "SELECT * FROM user WHERE username = ? AND password = ?";
+        String sql = "SELECT * FROM bruger WHERE mail = ? AND kodeord = ?";
 
         try (Connection connection = connectionPool.getConnection())
         {
@@ -26,7 +26,7 @@ class UserMapper
                 ResultSet rs = ps.executeQuery();
                 if (rs.next())
                 {
-                    String role = rs.getString("role");
+                    String role = rs.getString("admin");
                     user = new User(username, password, role);
                 } else
                 {
@@ -44,7 +44,7 @@ class UserMapper
     {
         Logger.getLogger("web").log(Level.INFO, "");
         User user;
-        String sql = "insert into user (username, password, role) values (?,?,?)";
+        String sql = "insert into bruger (mail, kodeord, admin) values (?,?,?)";
         try (Connection connection = connectionPool.getConnection())
         {
             try (PreparedStatement ps = connection.prepareStatement(sql))
