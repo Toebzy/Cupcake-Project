@@ -6,20 +6,28 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<t:pagetemplate>
+    <jsp:attribute name="header">
+             Login
+    </jsp:attribute>
+
+    <jsp:attribute name="footer">
+            Login
+    </jsp:attribute>
+
+    <jsp:body>
 ${requestScope.msg}
 <form action="opretbruger" method="post">
-    <label for="mail">mail: </label>
-    <input type="text" id="mail" name="mail" placeholder="123@gmail.com"/>
-    <label for="kodeord">kodeord: </label>
-    <input type="password" id="kodeord" name="kodeord" placeholder="kodeord"/>
-    <label for="gentagkodeord">gentag kodeord: </label>
-    <input type="password" id="gentagkodeord" name="gentagkodeord" placeholder="gentag kodeord"/>
-    <input type="submit"  value="opret bruger"/>
+    <label for="mail">Mail: </label>
+    <input type="text" id="mail" name="mail" placeholder="123@123.dk"/>
+    <label for="kodeord">Kodeord: </label>
+    <input type="password" id="kodeord" name="kodeord" placeholder="Kodeord"/>
+    <label for="gentagkodeord">Gentag Kodeord: </label>
+    <input type="password" id="gentagkodeord" name="gentagkodeord" placeholder="Kodeord"/>
+    <input type="submit"  value="Opret Bruger"/>
 </form>
-</body>
-</html>
+    </jsp:body>
+</t:pagetemplate>
