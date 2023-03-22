@@ -35,5 +35,6 @@
             <option name="Citron" value="8">Citron +8kr.</option>
             <option name="Blåskimmelost" value="9">Blåskimmelost +9kr.</option>
         </select>
+
     </jsp:body>
 </t:pagetemplate>
