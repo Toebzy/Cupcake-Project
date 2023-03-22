@@ -7,6 +7,7 @@ public class User
     private String username;
     private String password;
     private String role;
+    private int id;
     private Kurv kurv;
 
     public User(String username, String password, String role)
@@ -15,6 +16,15 @@ public class User
         this.password = password;
         this.role = role;
     }
+    public User(String username, String password, String role, int id)
+    {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        this.id = id;
+    }
+    public int getId()
+    {return id;}
 
     public String getUsername()
     {

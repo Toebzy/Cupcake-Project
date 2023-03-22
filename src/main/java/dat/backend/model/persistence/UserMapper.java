@@ -27,7 +27,8 @@ class UserMapper
                 if (rs.next())
                 {
                     String role = rs.getString("admin");
-                    user = new User(username, password, role);
+                    int id = rs.getInt("idbruger");
+                    user = new User(username, password, role, id);
                 } else
                 {
                     throw new DatabaseException("Wrong username or password");

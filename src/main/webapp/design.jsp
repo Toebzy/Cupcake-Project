@@ -13,7 +13,17 @@
 
     <jsp:body>
         <h3>Design din helt egen Olsker Cupcake her!</h3>
+        <form action="tilføjtilkurv" method="post">
+            <label for="bund">Vælg en bund:</label>
+            <select name="bund" id="bund">
+                <option  value="1">Chokolade +5kr.</option>
+                <option value="2">Vanilje +5kr.</option>
+                <option value="3">Muskatnød +5kr.</option>
+                <option  value="4">Pistacie +6kr.</option>
+                <option  value="5">Mandel +7kr.</option>
+            </select>
 
+<<<<<<< Updated upstream
         <label for="bund">Vælg en bund:</label>
         <select name="bund" id="bund">
             <option name="Chokolade" value="1">Chokolade +5kr.</option>
@@ -36,5 +46,21 @@
             <option name="Blåskimmelost" value="9">Blåskimmelost +9kr.</option>
         </select>
 
+=======
+            <label for="top">Vælg en top:</label>
+            <select name="top" id="top">
+                <option  value="1">Chokolade +5kr.</option>
+                <option  value="2">Blåbær +5kr.</option>
+                <option  value="3">Hindbær +5kr.</option>
+                <option  value="4">Knas +6kr.</option>
+                <option  value="5">Jordbær +6kr.</option>
+                <option  value="6">Rom/Rom/Rosin +7kr.</option>
+                <option  value="7">Appelsin +8kr.</option>
+                <option  value="8">Citron +8kr.</option>
+                <option  value="9">Blåskimmelost +9kr.</option>
+            </select>
+            <button>Tilføj til kurv</button>
+        </form>
+>>>>>>> Stashed changes
     </jsp:body>
 </t:pagetemplate>
