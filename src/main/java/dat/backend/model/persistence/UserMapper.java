@@ -40,7 +40,7 @@ class UserMapper
         return user;
     }
 
-    static User createUser(String username, String password, String role, ConnectionPool connectionPool) throws DatabaseException
+    static User createUser(String mail, String kodeord, String role, ConnectionPool connectionPool) throws DatabaseException
     {
         Logger.getLogger("web").log(Level.INFO, "");
         User user;
@@ -49,16 +49,16 @@ class UserMapper
         {
             try (PreparedStatement ps = connection.prepareStatement(sql))
             {
-                ps.setString(1, username);
-                ps.setString(2, password);
+                ps.setString(1, mail);
+                ps.setString(2, kodeord);
                 ps.setString(3, role);
                 int rowsAffected = ps.executeUpdate();
                 if (rowsAffected == 1)
                 {
-                    user = new User(username, password, role);
+                    user = new User(mail, kodeord, role);
                 } else
                 {
-                    throw new DatabaseException("The user with username = " + username + " could not be inserted into the database");
+                    throw new DatabaseException("The user with mail = " + mail + " could not be inserted into the database");
                 }
             }
         }
@@ -70,4 +70,27 @@ class UserMapper
     }
 
 
+    public static boolean checkUser(String mail, ConnectionPool connectionPool) throws DatabaseException
+    {
+        String sql = "SELECT * FROM bruger WHERE mail = ?";
+        User user;
+        try (Connection connection = connectionPool.getConnection())
+        {
+            try (PreparedStatement ps = connection.prepareStatement(sql))
+            {
+                ps.setString(1, mail);
+                ResultSet rs = ps.executeQuery();
+                if (rs.next())
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
+            }
+        } catch (SQLException ex)
+        {
+            throw new DatabaseException(ex, "Error logging in. Something went wrong with the database");
+        }
+    }
 }

@@ -24,6 +24,8 @@
             <input type="password" id="password" name="password"/>
             <input type="submit"  value="Log in"/>
         </form>
-
+        <form action="opretbruger" method="get">
+            <button>Opret ny bruger</button>
+        </form>
     </jsp:body>
 </t:pagetemplate>

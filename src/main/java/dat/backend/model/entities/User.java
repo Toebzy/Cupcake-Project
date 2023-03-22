@@ -7,6 +7,7 @@ public class User
     private String username;
     private String password;
     private String role;
+    private Kurv kurv;
 
     public User(String username, String password, String role)
     {
