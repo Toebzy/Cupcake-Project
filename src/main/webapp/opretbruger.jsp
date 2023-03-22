@@ -11,11 +11,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <t:pagetemplate>
     <jsp:attribute name="header">
-             Login
+             Opret Bruger
     </jsp:attribute>
 
     <jsp:attribute name="footer">
-            Login
+            Opret Bruger
     </jsp:attribute>
 
     <jsp:body>
