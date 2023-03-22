@@ -16,24 +16,24 @@
 
         <label for="bund">Vælg en bund:</label>
         <select name="bund" id="bund">
-            <option name="Chokolade" value="Chokolade">Chokolade +5kr.</option>
-            <option name="Vanilje" value="Vanilje">Vanilje +5kr.</option>
-            <option name="Muskatnød" value="Muskatnød">Muskatnød +5kr.</option>
-            <option name="Pistacie" value="Pistacie">Pistacie +6kr.</option>
-            <option name="Mandel" value="Mandel">Mandel +7kr.</option>
+            <option name="Chokolade" value="1">Chokolade +5kr.</option>
+            <option name="Vanilje" value="2">Vanilje +5kr.</option>
+            <option name="Muskatnød" value="3">Muskatnød +5kr.</option>
+            <option name="Pistacie" value="4">Pistacie +6kr.</option>
+            <option name="Mandel" value="5">Mandel +7kr.</option>
         </select>
 
         <label for="top">Vælg en top:</label>
         <select name="top" id="top">
-            <option name="Chokolade" value="Chokolade">Chokolade +5kr.</option>
-            <option name="Blåbær" value="Blåbær">Blåbær +5kr.</option>
-            <option name="Hindbær" value="Hindbær">Hindbær +5kr.</option>
-            <option name="Knas" value="Knas">Knas +6kr.</option>
-            <option name="Jordbær" value="Jordbær">Jordbær +6kr.</option>
-            <option name="Rom/Rosin" value="Rom/Rosin">Rom/Rom/Rosin +7kr.</option>
-            <option name="Appelsin" value="Appelsin">Appelsin +8kr.</option>
-            <option name="Citron" value="Citron">Citron +8kr.</option>
-            <option name="Blåskimmelost" value="Blåskimmelost">Blåskimmelost +9kr.</option>
+            <option name="Chokolade" value="1">Chokolade +5kr.</option>
+            <option name="Blåbær" value="2">Blåbær +5kr.</option>
+            <option name="Hindbær" value="3">Hindbær +5kr.</option>
+            <option name="Knas" value="4">Knas +6kr.</option>
+            <option name="Jordbær" value="5">Jordbær +6kr.</option>
+            <option name="Rom/Rosin" value="6">Rom/Rom/Rosin +7kr.</option>
+            <option name="Appelsin" value="7">Appelsin +8kr.</option>
+            <option name="Citron" value="8">Citron +8kr.</option>
+            <option name="Blåskimmelost" value="9">Blåskimmelost +9kr.</option>
         </select>
     </jsp:body>
 </t:pagetemplate>
