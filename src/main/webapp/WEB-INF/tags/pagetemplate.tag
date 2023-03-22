@@ -54,16 +54,25 @@
     <hr/>
     <div class="row mt-4">
         <div class="col">
-            Nørgaardsvej 30<br/>
-            2800 Lyngby
+            <br/>
+            Åbningstider:<br/>
+            Mandag-Fredag: 10-17:30<br/>
+            Lørdag: 10-14:00<br/>
+            Søndag: Lukket
         </div>
         <div class="col">
             <jsp:invoke fragment="footer"/><br/>
-            <p>&copy; 2022 Cphbusiness</p>
+            <p>&copy; 2023 Olsker Cupcakes</p><br/>
+            Mail: Olsker@cupcakes.dk<br/>
+            Telefon: 36 15 45 00
         </div>
         <div class="col">
-            Datamatikeruddannelsen<br/>
-            2. semester efterår 2022
+            <br/>
+            Rønnevej 54<br/>
+            3770 Allinge<br/>
+            <br/>
+            <img src="${pageContext.request.contextPath}/images/flogo.png" width="32px;" class="img-fluid"/>
+            <img src="${pageContext.request.contextPath}/images/ilogo.png" width="32px;" class="img-fluid"/>
         </div>
     </div>
 
