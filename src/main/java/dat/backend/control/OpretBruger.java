@@ -38,6 +38,11 @@ public class OpretBruger extends HttpServlet
                 request.setAttribute("msg", "Denne mail findes allerede i vores system");
                 request.getRequestDispatcher("opretbruger.jsp").forward(request,response);
             }
+            if(!mail.contains("@") || !mail.contains("."))
+            {
+                request.setAttribute("msg", "Ugyldig email");
+                request.getRequestDispatcher("opretbruger.jsp").forward(request,response);
+            }
             if(!kodeord.equals(gentagKodeord))
             {
                 request.setAttribute("msg", "De to kodeord matcher ikke");
