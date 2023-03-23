@@ -30,7 +30,7 @@
                 <option  value="3">Hindbær +5kr.</option>
                 <option  value="4">Knas +6kr.</option>
                 <option  value="5">Jordbær +6kr.</option>
-                <option  value="6">Rom/Rom/Rosin +7kr.</option>
+                <option  value="6">Rom/Rosin +7kr.</option>
                 <option  value="7">Appelsin +8kr.</option>
                 <option  value="8">Citron +8kr.</option>
                 <option  value="9">Blåskimmelost +9kr.</option>
