@@ -2,7 +2,9 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<style><%@include file="/css/style.css"%></style>
 <t:pagetemplate>
+
     <jsp:attribute name="header">
             Design Selv
     </jsp:attribute>
@@ -35,7 +37,7 @@
                 <option  value="8">Citron +8kr.</option>
                 <option  value="9">Blåskimmelost +9kr.</option>
             </select>
-            <button>Tilføj til kurv</button>
+            <button class="btn">Tilføj til kurv</button>
         </form>
     </jsp:body>
 </t:pagetemplate>

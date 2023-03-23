@@ -3,6 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@page errorPage="error.jsp" isErrorPage="false" %>
+<style><%@include file="/css/style.css"%></style>
 
 <t:pagetemplate>
     <jsp:attribute name="header">
@@ -22,10 +23,10 @@
             <input type="text" id="username" name="username"/>
             <label for="password">Password: </label>
             <input type="password" id="password" name="password"/>
-            <input type="submit"  value="Log in"/>
+            <input type="submit" class="btn"  value="Log in"/>
         </form>
         <form action="opretbruger" method="get">
-            <button>Opret ny bruger</button>
+            <button class="btn">Opret ny bruger</button>
         </form>
     </jsp:body>
 </t:pagetemplate>
