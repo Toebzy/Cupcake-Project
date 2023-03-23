@@ -12,9 +12,18 @@
     </jsp:attribute>
 
     <jsp:body>
+        <c:if test="${sessionScope.user != null}">
+            <p>You are logged in with the role of "${sessionScope.user.role}".</p>
+        </c:if>
+
+        <c:if test="${sessionScope.user == null}">
+            <p>You are not logged in yet. You can do it here: <a
+                    href="../login.jsp">Login</a></p>
+        </c:if>
+
 <html>
 <head>
-    <title>Title</title>
+    <title>Kurv</title>
 </head>
 <body>
 <div>
@@ -51,7 +60,7 @@
 </div>
 <form action="betal" method="post">
 total: ${requestScope.totalpris}
-    <button>betal</button>
+    <button>Betal</button>
 </form>
 </body>
 </html>
