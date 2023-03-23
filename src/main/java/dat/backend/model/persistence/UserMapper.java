@@ -62,8 +62,7 @@ class UserMapper
                     throw new DatabaseException("The user with mail = " + mail + " could not be inserted into the database");
                 }
             }
-        }
-        catch (SQLException ex)
+        } catch (SQLException ex)
         {
             throw new DatabaseException(ex, "Could not insert username into database");
         }
@@ -93,5 +92,24 @@ class UserMapper
         {
             throw new DatabaseException(ex, "Error logging in. Something went wrong with the database");
         }
+    }
+
+    public static int fåSaldo(User user, ConnectionPool connectionPool) throws SQLException
+    {
+        String sql = "SELECT * FROM bruger WHERE mail = ?";
+        int saldo = 0;
+        try (Connection connection = connectionPool.getConnection())
+        {
+            try (PreparedStatement ps = connection.prepareStatement(sql))
+            {
+                ps.setString(1, user.getUsername());
+                ResultSet rs = ps.executeQuery();
+                if (rs.next())
+                {
+                    saldo = rs.getInt("saldo");
+                }
+            }
+        }
+        return saldo;
     }
 }

@@ -3,6 +3,8 @@ package dat.backend.model.persistence;
 import dat.backend.model.entities.User;
 import dat.backend.model.exceptions.DatabaseException;
 
+import java.sql.SQLException;
+
 public class UserFacade
 {
     public static User login(String username, String password, ConnectionPool connectionPool) throws DatabaseException
@@ -18,5 +20,10 @@ public class UserFacade
     public static boolean checkUser(String mail, ConnectionPool conectionPool) throws DatabaseException
     {
         return UserMapper.checkUser(mail, conectionPool);
+    }
+
+    public static int fåSaldo(User user, ConnectionPool connectionPool) throws SQLException
+    {
+        return UserMapper.fåSaldo(user, connectionPool);
     }
 }

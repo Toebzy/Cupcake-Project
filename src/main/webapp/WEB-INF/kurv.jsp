@@ -59,6 +59,7 @@
     </table>
 </div>
 <form action="betal" method="post">
+din saldo: ${requestScope.saldo} <br>
 total: ${requestScope.totalpris}
     <button>Betal</button>
     <input type="hidden" name="totalpris" value="${requestScope.totalpris}">

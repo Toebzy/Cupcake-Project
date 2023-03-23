@@ -5,11 +5,13 @@ import dat.backend.model.entities.User;
 import dat.backend.model.exceptions.DatabaseException;
 import dat.backend.model.persistence.ConnectionPool;
 import dat.backend.model.persistence.KurvFacade;
+import dat.backend.model.persistence.UserFacade;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(name = "SeKurv", value = "/sekurv")
@@ -37,13 +39,16 @@ public class SeKurv extends HttpServlet
             {
                 totalpris += Integer.parseInt(l);
             }
+            int saldo = UserFacade.fåSaldo(user, connectionPool);
             request.setAttribute("totalpris", totalpris);
+            request.setAttribute("saldo", saldo);
             request.setAttribute("kurv", kurv);
             request.setAttribute("top", top);
             request.setAttribute("bund", bund);
             request.setAttribute("pris", pris);
             request.getRequestDispatcher("WEB-INF/kurv.jsp").forward(request,response);
-        } catch (DatabaseException e)
+
+        } catch (DatabaseException | SQLException e)
         {
             e.printStackTrace();
         }
