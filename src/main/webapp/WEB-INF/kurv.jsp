@@ -49,6 +49,10 @@
         </c:forEach>
     </table>
 </div>
+<form action="betal" method="post">
+total: ${requestScope.totalpris}
+    <button>betal</button>
+</form>
 </body>
 </html>
     </jsp:body>

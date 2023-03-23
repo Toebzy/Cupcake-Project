@@ -10,6 +10,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet(name = "TilføjTilKurv", value = "/tilføjtilkurv")
 public class TilfjTilKurv extends HttpServlet
@@ -34,7 +35,7 @@ public class TilfjTilKurv extends HttpServlet
             int topping = Integer.parseInt(request.getParameter("top"));
             int bund = Integer.parseInt(request.getParameter("bund"));
             KurvFacade.tilføjTilKurv(topping, bund, user,connectionPool);
-        } catch (DatabaseException e)
+        } catch (DatabaseException | SQLException e)
         {
             e.printStackTrace();
         }

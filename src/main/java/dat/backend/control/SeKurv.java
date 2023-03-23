@@ -32,6 +32,12 @@ public class SeKurv extends HttpServlet
             List<String> top = kurv.get(0);
             List<String> bund = kurv.get(1);
             List<String> pris = kurv.get(2);
+            int totalpris = 0;
+            for (String l: pris)
+            {
+                totalpris += Integer.parseInt(l);
+            }
+            request.setAttribute("totalpris", totalpris);
             request.setAttribute("kurv", kurv);
             request.setAttribute("top", top);
             request.setAttribute("bund", bund);
