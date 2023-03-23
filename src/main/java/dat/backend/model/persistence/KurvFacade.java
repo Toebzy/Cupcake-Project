@@ -17,4 +17,9 @@ public class KurvFacade
     {
         return KurvMapper.seKurv(user, connectionPool);
     }
+
+    public static void færdigOrdre(User user, ConnectionPool connectionPool) throws SQLException
+    {
+        KurvMapper.færdigOrdre(user, connectionPool);
+    }
 }

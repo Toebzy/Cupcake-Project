@@ -35,6 +35,7 @@ public class TilfjTilKurv extends HttpServlet
             int topping = Integer.parseInt(request.getParameter("top"));
             int bund = Integer.parseInt(request.getParameter("bund"));
             KurvFacade.tilføjTilKurv(topping, bund, user,connectionPool);
+            request.getRequestDispatcher("design.jsp").forward(request,response);
         } catch (DatabaseException | SQLException e)
         {
             e.printStackTrace();

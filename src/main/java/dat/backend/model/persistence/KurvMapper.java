@@ -46,7 +46,7 @@ class KurvMapper
                         PreparedStatement ps2 = connection.prepareStatement(sql2);
                         ps2.setInt(1, bottom);
                         ps2.setInt(2, topping);
-                        ps2.setInt(3, 5);
+                        ps2.setInt(3, cupcakepris);
                         ps2.setInt(4, ordrenummer);
                         ps2.executeUpdate();
                     }
@@ -119,5 +119,21 @@ class KurvMapper
             }
         }
         return pris;
+    }
+
+    public static void færdigOrdre(User user, ConnectionPool connectionPool) throws SQLException
+    {
+        String sql = "UPDATE ordrerliste SET ordrestatus = \"færdig\" WHERE idbruger = ? AND ordrestatus like 'igang';";
+        try (Connection connection = connectionPool.getConnection())
+        {
+            try (PreparedStatement ps = connection.prepareStatement(sql))
+            {
+                ps.setInt(1, user.getId());
+                ps.executeUpdate();
+            } catch (SQLException throwables)
+            {
+                throwables.printStackTrace();
+            }
+        }
     }
 }

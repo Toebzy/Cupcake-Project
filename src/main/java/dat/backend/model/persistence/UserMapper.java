@@ -9,6 +9,8 @@ import java.util.logging.Logger;
 
 class UserMapper
 {
+    private static Object ConnectionPool;
+
     static User login(String username, String password, ConnectionPool connectionPool) throws DatabaseException
     {
         Logger.getLogger("web").log(Level.INFO, "");
@@ -112,4 +114,22 @@ class UserMapper
         }
         return saldo;
     }
-}
+
+    public static void setSaldo(int saldo, User user, ConnectionPool connectionPool) throws SQLException
+    {
+            String sql = "UPDATE bruger SET saldo= ? WHERE idbruger = ?";
+            try (Connection connection = connectionPool.getConnection())
+            {
+                try (PreparedStatement ps = connection.prepareStatement(sql))
+                {
+                    ps.setInt(1, saldo);
+                    ps.setInt(2, user.getId());
+                    ps.executeUpdate();
+                } catch (SQLException throwables)
+                {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
+

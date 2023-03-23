@@ -26,4 +26,9 @@ public class UserFacade
     {
         return UserMapper.fåSaldo(user, connectionPool);
     }
+
+    public static void setSaldo(int saldo, User user, ConnectionPool connectionPool) throws SQLException
+    {
+        UserMapper.setSaldo(saldo, user, connectionPool);
+    }
 }
