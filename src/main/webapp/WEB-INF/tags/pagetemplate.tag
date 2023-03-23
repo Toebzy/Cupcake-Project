@@ -53,7 +53,6 @@
     <h1><jsp:invoke fragment="header"/></h1>
     <jsp:doBody/>
 </div>
-
 <!-- Footer -->
 <div class="container mt-3">
     <hr/>
