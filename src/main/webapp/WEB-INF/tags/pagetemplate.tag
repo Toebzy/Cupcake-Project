@@ -29,7 +29,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/WEB-INF/kurv.jsp">Kurv</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/sekurv">Kurv</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/udvalg.jsp">Vores Udvalg</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/design.jsp">Design Selv</a>
                     <c:if test="${sessionScope.user == null }">
