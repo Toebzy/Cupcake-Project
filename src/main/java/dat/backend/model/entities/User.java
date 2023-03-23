@@ -79,6 +79,7 @@ public class User
                 "brugerNavn='" + username + '\'' +
                 ", kodeord='" + password + '\'' +
                 ", rolle='" + role + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 }

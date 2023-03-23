@@ -61,6 +61,8 @@
 <form action="betal" method="post">
 total: ${requestScope.totalpris}
     <button>Betal</button>
+    <input type="hidden" name="totalpris" value="${requestScope.totalpris}">
+    <button>betal</button>
 </form>
 </body>
 </html>
