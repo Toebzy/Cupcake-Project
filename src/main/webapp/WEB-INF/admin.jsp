@@ -8,11 +8,11 @@
 
 <t:pagetemplate>
     <jsp:attribute name="header">
-         Admin Page
+         Administrator Område
     </jsp:attribute>
 
     <jsp:attribute name="footer">
-        Admin Page
+        Administrator
     </jsp:attribute>
 
     <jsp:body>
@@ -99,7 +99,7 @@
 </div>
 
         <c:if test="${sessionScope.user.role == 1}">
-            <p>You are logged in with the role of admin.</p>
+            <p>Du er logget ind med rollen administrator</p>
         </c:if>
 
     </jsp:body>
