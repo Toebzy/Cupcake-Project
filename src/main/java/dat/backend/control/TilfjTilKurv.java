@@ -35,6 +35,14 @@ public class TilfjTilKurv extends HttpServlet
             int topping = Integer.parseInt(request.getParameter("top"));
             int bund = Integer.parseInt(request.getParameter("bund"));
             KurvFacade.tilføjTilKurv(topping, bund, user,connectionPool);
+            if(request.getParameter("jsp").equals("udvalg"))
+            {
+                request.getRequestDispatcher("udvalg.jsp").forward(request,response);
+            }
+            if(request.getParameter("jsp").equals("index"))
+            {
+                request.getRequestDispatcher("index.jsp").forward(request,response);
+            }
             request.getRequestDispatcher("design.jsp").forward(request,response);
         } catch (DatabaseException | SQLException e)
         {

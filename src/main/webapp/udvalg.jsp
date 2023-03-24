@@ -24,7 +24,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Chokolade</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="1" name="top">
+                                    <input hidden value="1" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -36,7 +41,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Lemon</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="8" name="top">
+                                    <input hidden value="2" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -48,7 +58,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Strawberry</h3>
                                 <h4 class="product-des">samme farve som tobias hår</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="6" name="top">
+                                    <input hidden value="2" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -60,7 +75,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Blueberry</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="2" name="top">
+                                    <input hidden value="3" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -71,7 +91,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Rum Raisin</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="7" name="top">
+                                    <input hidden value="3" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -82,7 +107,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Crispy Chokolade</h3>
                                 <h4 class="product-des">Vi har tabt den på gulvet</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="4" name="top">
+                                    <input hidden value="1" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -93,7 +123,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Orange</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="7" name="top">
+                                    <input hidden value="2" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -104,7 +139,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Vanilje Hindbær</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="3" name="top">
+                                    <input hidden value="2" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -115,7 +155,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Blue Cheese</h3>
                                 <h4 class="product-des">seek mental help immediately</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="9" name="top">
+                                    <input hidden value="5" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -126,7 +171,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Vanilje Mandel</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="6" name="top">
+                                    <input hidden value="2" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -137,7 +187,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Chokolade Hindbær</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="3" name="top">
+                                    <input hidden value="1" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -148,7 +203,12 @@
                             <div class="part-2">
                                 <h3 class="product-title">Chokolade Jordbær</h3>
                                 <h4 class="product-des">den smager af citron</h4>
-                                <a href="#!" class="btn">KØB HER</a>
+                                <form action="tilføjtilkurv" method="post">
+                                    <input hidden value="5" name="top">
+                                    <input hidden value="1" name="bund">
+                                    <input hidden value="udvalg" name="jsp">
+                                    <button class="btn">Tilføj til kurv</button>
+                                </form>
                             </div>
                         </div>
                     </div>
