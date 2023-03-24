@@ -33,7 +33,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <c:if test="${sessionScope.user.username != null}">
-                        <a class="nav-item nav-link" href="${pageContext.request.contextPath}/sekurv">${sessionScope.user.username}</a>
+                        <a class="nav-item">${sessionScope.user.username}</a>
                     </c:if>
                     <c:if test="${sessionScope.user != null}">
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/sekurv">Kurv</a>

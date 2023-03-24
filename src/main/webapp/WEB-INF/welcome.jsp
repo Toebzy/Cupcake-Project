@@ -6,28 +6,25 @@
 
 <t:pagetemplate>
     <jsp:attribute name="header">
-         Welcome to the logged in area
+         Velkommen til Olsker Cupcakes!
     </jsp:attribute>
 
     <jsp:attribute name="footer">
-        Logged in area
+        Logget ind
     </jsp:attribute>
 
     <jsp:body>
 
-        <p>You should be logged in now</p>
+        <p>Du er nu logget ind</p>
 
         <c:if test="${sessionScope.user != null}">
-            <p>You are logged in with the role of "${sessionScope.user.role}".</p>
+            <p>Du er logget ind med rollen: "${sessionScope.user.role}".</p>
         </c:if>
 
         <c:if test="${sessionScope.user == null}">
-            <p>You are not logged in yet. You can do it here: <a
+            <p>Du er ikke logget ind endnu. Du kan gøre det her: <a
                     href="../login.jsp">Login</a></p>
         </c:if>
-        <form action="sekurv" method="post">
-            <button class="btn">se kurv</button>
-        </form>
     </jsp:body>
 
 </t:pagetemplate>
