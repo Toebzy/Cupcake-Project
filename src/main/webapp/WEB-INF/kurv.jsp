@@ -27,37 +27,55 @@
     <title>Kurv</title>
 </head>
 <body>
-<div>
-    <table>
-        <tr>
-            <th>Top</th>
-            <th>Bund</th>
-            <th>Pris</th>
-        </tr>
+<p>Din kurv</p>
+<div id ="tablesection" class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Top</th>
+                </tr>
+                </thead>
 
-    </table>
-    <table>
-        <c:forEach var="emne" items="${requestScope.top}" varStatus="varStatus">
-        <tr>
-            <td>${emne}</td>
-        </tr>
-            </c:forEach>
-    </table>
+                <c:forEach var="emne" items="${requestScope.top}" varStatus="varStatus">
+                    <tr>
+                        <td>${emne}</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+        <div class="col" style="margin-left: 13px">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Bund</th>
+                </tr>
+                </thead>
 
-    <table>
-        <c:forEach var="emne" items="${requestScope.bund}" varStatus="varStatus">
-            <tr>
-                <td>${emne}</td>
-            </tr>
-        </c:forEach>
-    </table>
-    <table>
-        <c:forEach var="emne" items="${requestScope.pris}" varStatus="varStatus">
-            <tr>
-                <td>${emne} kr,-</td>
-            </tr>
-        </c:forEach>
-    </table>
+                <c:forEach var="emne" items="${requestScope.bund}" varStatus="varStatus">
+                    <tr>
+                        <td>${emne}</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+        <div class="col" style="margin-left: 13px">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Pris</th>
+                </tr>
+                </thead>
+
+                <c:forEach var="emne" items="${requestScope.pris}" varStatus="varStatus">
+                    <tr>
+                        <td>${emne}</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </div>
 </div>
 <form action="betal" method="post">
 din saldo: ${requestScope.saldo} <br>
