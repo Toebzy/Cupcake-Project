@@ -80,8 +80,9 @@ class KurvMapper
                 {
                     ordrenummer = rs.getString("idordrerliste");
                 }
-                String sql1 = "SELECT ordre.bottom, ordre.topping, ordre.cupcakepris FROM ordre INNER JOIN ordrerliste ON ordrerliste.idordrerliste = ordre.ordrenummer WHERE ordrestatus like 'igang'";
+                String sql1 = "SELECT ordre.bottom, ordre.topping, ordre.cupcakepris FROM ordre INNER JOIN ordrerliste ON ordrerliste.idordrerliste = ordre.ordrenummer WHERE ordrestatus like 'igang' AND idbruger = ?";
                 PreparedStatement ps1 = connection.prepareStatement(sql1);
+                ps1.setInt(1, user.getId());
                 ResultSet rs1 = ps1.executeQuery();
 
                 while (rs1.next())
