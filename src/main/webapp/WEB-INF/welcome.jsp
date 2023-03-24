@@ -26,7 +26,7 @@
                     href="../login.jsp">Login</a></p>
         </c:if>
         <form action="sekurv" method="post">
-            <button>se kurv</button>
+            <button class="btn">se kurv</button>
         </form>
     </jsp:body>
 

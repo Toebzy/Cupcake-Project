@@ -36,7 +36,7 @@
         </tr>
 
     </table>
-    <table style="display: inline-block; border: 1px solid; float: left; ">
+    <table>
         <c:forEach var="emne" items="${requestScope.top}" varStatus="varStatus">
         <tr>
             <td>${emne}</td>
@@ -44,14 +44,14 @@
             </c:forEach>
     </table>
 
-    <table style="display: inline-block; border: 1px solid; margin-left: 20px">
+    <table>
         <c:forEach var="emne" items="${requestScope.bund}" varStatus="varStatus">
             <tr>
                 <td>${emne}</td>
             </tr>
         </c:forEach>
     </table>
-    <table style="display: inline-block; border: 1px solid;  margin-left: 20px">
+    <table>
         <c:forEach var="emne" items="${requestScope.pris}" varStatus="varStatus">
             <tr>
                 <td>${emne}</td>

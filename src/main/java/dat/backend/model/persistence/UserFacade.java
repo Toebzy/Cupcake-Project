@@ -4,6 +4,7 @@ import dat.backend.model.entities.User;
 import dat.backend.model.exceptions.DatabaseException;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class UserFacade
 {
@@ -30,5 +31,9 @@ public class UserFacade
     public static void setSaldo(int saldo, User user, ConnectionPool connectionPool) throws SQLException
     {
         UserMapper.setSaldo(saldo, user, connectionPool);
+    }
+    public static List<List> seUsers(ConnectionPool connectionPool) throws DatabaseException
+    {
+        return UserMapper.seUsers(connectionPool);
     }
 }

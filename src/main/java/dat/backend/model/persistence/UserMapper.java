@@ -4,6 +4,8 @@ import dat.backend.model.entities.User;
 import dat.backend.model.exceptions.DatabaseException;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -114,6 +116,43 @@ class UserMapper
         }
         return saldo;
     }
+    public static List<List> seUsers(ConnectionPool connectionPool) throws DatabaseException
+    {
+        List<List> list = new ArrayList<>();
+        List<String> arrayid = new ArrayList<>();
+        List<String> arraymail = new ArrayList<>();
+        List<String> arraykodeord = new ArrayList<>();
+        List<String> arrayadmin = new ArrayList<>();
+        List<String> arraysaldo = new ArrayList<>();
+        list.add(arrayid);
+        list.add(arraymail);
+        list.add(arraykodeord);
+        list.add(arrayadmin);
+        list.add(arraysaldo);
+        String sql1 = "SELECT bruger.idbruger, bruger.mail, bruger.kodeord, bruger.admin, bruger.saldo FROM bruger";
+
+        try (Connection connection = connectionPool.getConnection())
+        {
+            try (PreparedStatement ps = connection.prepareStatement(sql1))
+            {
+
+                ResultSet rs = ps.executeQuery();
+
+            while (rs.next())
+            {
+                arrayid.add(rs.getString("idbruger"));
+                arraymail.add(rs.getString("mail"));
+                arraykodeord.add(rs.getString("kodeord"));
+                arrayadmin.add(rs.getString("admin"));
+                arraysaldo.add(rs.getString("saldo"));
+            }
+            }
+        }catch (SQLException ex)
+            {
+            throw new DatabaseException(ex, "Error logging in. Something went wrong with the database");
+            }
+        return list;
+        }
 
     public static void setSaldo(int saldo, User user, ConnectionPool connectionPool) throws SQLException
     {
@@ -132,4 +171,7 @@ class UserMapper
             }
         }
     }
+
+
+
 

@@ -43,6 +43,9 @@
                     <c:if test="${sessionScope.user == null }">
                         <a class="nav-item nav-link" href="${pageContext.request.contextPath}/login.jsp">Login</a>
                     </c:if>
+                <c:if test="${sessionScope.user.role == 1 }">
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/adminpage">Admin page</a>
+                </c:if>
                     <c:if test="${sessionScope.user != null }">
                         <a class="nav-item nav-link" href="${pageContext.request.contextPath}/logout">Log ud</a>
                     </c:if>
