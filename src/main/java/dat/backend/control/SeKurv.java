@@ -56,8 +56,6 @@ public class SeKurv extends HttpServlet
                     break;
                     case "9": topNavn.add("Blåskimmelost");
                     break;
-                    default:
-                        System.out.println("hej");
                 }
             }
 
