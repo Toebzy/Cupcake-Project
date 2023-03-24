@@ -1,5 +1,6 @@
 package dat.backend.model.config;
 
+import dat.backend.model.exceptions.DatabaseException;
 import dat.backend.model.persistence.ConnectionPool;
 
 import javax.servlet.ServletContextEvent;
@@ -22,10 +23,7 @@ import java.util.logging.Logger;
 public class ApplicationStart implements ServletContextListener
 {
     private static ConnectionPool connectionPool;
-
-    public ApplicationStart()
-    {
-
+    public ApplicationStart() throws DatabaseException {
     }
 
     @Override

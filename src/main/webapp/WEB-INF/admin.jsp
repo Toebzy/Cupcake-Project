@@ -21,15 +21,15 @@
 <div id ="tablesection" class="container">
     <div class="row">
         <div class="col">
-            <table class="table">
+            <table class="table" style="width:100%">
                 <thead class="thead-dark">
                 <tr>
-                    <th>ID</th>
+                    <th style="width:70%">ID</th>
                 </tr>
                 </thead>
 
                 <c:forEach var="emne" items="${requestScope.idbruger}" varStatus="varStatus">
-                <tr>
+                    <tr style="height:50px ">
                      <td>${emne}</td>
                 </tr>
                 </c:forEach>
@@ -39,12 +39,12 @@
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
-                    <th>Email</th>
+                    <th style="width:70%">Email</th>
                 </tr>
                 </thead>
 
                 <c:forEach var="emne" items="${requestScope.mail}" varStatus="varStatus">
-                    <tr>
+                    <tr style="height:50px">
                         <td>${emne}</td>
                     </tr>
                 </c:forEach>
@@ -54,12 +54,12 @@
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
-                    <th>Kodeord</th>
+                    <th style="width:70%">Kodeord</th>
                 </tr>
                 </thead>
 
                 <c:forEach var="emne" items="${requestScope.kodeord}" varStatus="varStatus">
-                    <tr>
+                    <tr style="height:50px">
                         <td>${emne}</td>
                     </tr>
                 </c:forEach>
@@ -69,12 +69,12 @@
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
-                    <th>Admin</th>
+                    <th style="width:70%">Admin</th>
                 </tr>
                 </thead>
 
                 <c:forEach var="emne" items="${requestScope.admin}" varStatus="varStatus">
-                    <tr>
+                    <tr style="height:50px">
                         <td>${emne}</td>
                     </tr>
                 </c:forEach>
@@ -84,14 +84,19 @@
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
-                    <th>Saldo</th>
+                    <th style="width:70%">Saldo</th>
                 </tr>
                 </thead>
 
                 <c:forEach var="emne" items="${requestScope.saldo}" varStatus="varStatus">
-                    <tr>
-                        <td>${emne}</td>
-                    </tr>
+                    <form action="saldochange" method="post">
+                        <tr style="height:50px">
+                        <th> <input type="number" id="saldo" name="Saldo" min="0" value =${emne}></th>
+                            <input hidden value ="${requestScope.idbruger}" name ="idbruger">
+                            <input hidden value = "${varStatus.index}" name = "varStatus">
+                        <th> <button class ="btn"> Opdater </button></th>
+                        </tr>
+                    </form>
                 </c:forEach>
             </table>
         </div>
