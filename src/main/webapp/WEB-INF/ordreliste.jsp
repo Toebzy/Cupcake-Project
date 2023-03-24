@@ -87,9 +87,10 @@
 
                         <c:forEach var="emne" items="${requestScope.idordrerliste}" varStatus="varStatus">
                             <tr style="height:50px">
+
                                 <form action="seordre" method="post">
                                     <input hidden value="${emne}" name="ordrenummer">
-                                <td><button class="btn">Se ordre</button></td>
+                               <td> <button class="btn">Se ordre</button></td>
                                 </form>
                             </tr>
                         </c:forEach>
