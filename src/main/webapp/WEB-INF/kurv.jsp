@@ -54,14 +54,14 @@
     <table>
         <c:forEach var="emne" items="${requestScope.pris}" varStatus="varStatus">
             <tr>
-                <td>${emne}</td>
+                <td>${emne} kr,-</td>
             </tr>
         </c:forEach>
     </table>
 </div>
 <form action="betal" method="post">
 din saldo: ${requestScope.saldo} <br>
-total: ${requestScope.totalpris}
+total: ${requestScope.totalpris} kr,-
     <input type="hidden" name="totalpris" value="${requestScope.totalpris}">
     <button>betal</button>
     ${requestScope.msg}
