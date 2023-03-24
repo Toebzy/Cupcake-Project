@@ -153,6 +153,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
     </jsp:body>
 </t:pagetemplate>
