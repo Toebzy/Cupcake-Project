@@ -102,6 +102,9 @@
         </div>
     </div>
 </div>
+        <form action="seordreliste" method="post">
+            <button class="btn">Se ordreliste</button>
+        </form>
     </jsp:body>
 
 </t:pagetemplate>

@@ -37,7 +37,9 @@
                 <option  value="8">Citron +8kr.</option>
                 <option  value="9">Blåskimmelost +9kr.</option>
             </select>
+            <input hidden value="design" name="jsp">
             <button class="btn">Tilføj til kurv</button>
+
         </form>
     </jsp:body>
 </t:pagetemplate>

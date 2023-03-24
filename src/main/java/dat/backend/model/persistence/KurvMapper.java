@@ -12,7 +12,7 @@ class KurvMapper
     public static void tilføjTilKurv(int topping, int bottom, User user, ConnectionPool connectionPool) throws DatabaseException, SQLException
     {
         String sql = "SELECT * FROM ordrerliste WHERE idbruger = ? AND ordrestatus like 'igang'";
-        int cupcakepris = fåPris(topping, connectionPool) + fåPris(bottom, connectionPool);
+        int cupcakepris = fåPrisTop(topping, connectionPool) + fåPrisBund(bottom, connectionPool);
         try (Connection connection = connectionPool.getConnection())
         {
             try (PreparedStatement ps = connection.prepareStatement(sql))
@@ -100,9 +100,30 @@ class KurvMapper
         return list;
     }
 
-    private static int fåPris(int id, ConnectionPool connectionPool) throws SQLException
+    static int fåPrisTop(int id, ConnectionPool connectionPool) throws SQLException
     {
         String sql = "SELECT * FROM topping WHERE idtopping = ?";
+        int pris = 0;
+        try (Connection connection = connectionPool.getConnection())
+        {
+            try (PreparedStatement ps = connection.prepareStatement(sql))
+            {
+                ps.setInt(1, id);
+                ResultSet rs2 = ps.executeQuery();
+                if(rs2.next())
+                {
+                    pris = rs2.getInt("pris");
+                }
+            } catch (SQLException throwables)
+            {
+                throwables.printStackTrace();
+            }
+        }
+        return pris;
+    }
+     static int fåPrisBund(int id, ConnectionPool connectionPool) throws SQLException
+    {
+        String sql = "SELECT * FROM bottom WHERE idbottom = ?";
         int pris = 0;
         try (Connection connection = connectionPool.getConnection())
         {
