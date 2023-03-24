@@ -5,6 +5,9 @@ body{
 .navbar-custom{
     background-color: #3c1460 !important;
 }
+.nav-item{
+    text-decoration:none
+}
 .img-fluid{
     max-width: 70% !important;
 }
