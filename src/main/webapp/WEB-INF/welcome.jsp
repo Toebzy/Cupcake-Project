@@ -17,10 +17,6 @@
 
         <p>Du er nu logget ind</p>
 
-        <c:if test="${sessionScope.user != null}">
-            <p>Du er logget ind med rollen: "${sessionScope.user.role}".</p>
-        </c:if>
-
         <c:if test="${sessionScope.user == null}">
             <p>Du er ikke logget ind endnu. Du kan gøre det her: <a
                     href="../login.jsp">Login</a></p>

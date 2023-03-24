@@ -102,11 +102,6 @@
         </div>
     </div>
 </div>
-
-        <c:if test="${sessionScope.user.role == 1}">
-            <p>Du er logget ind med rollen administrator</p>
-        </c:if>
-
     </jsp:body>
 
 </t:pagetemplate>
