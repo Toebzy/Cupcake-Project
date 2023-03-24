@@ -8,6 +8,11 @@ body{
 .nav-item{
     text-decoration:none
 }
+.hreflinkfix p{
+    color: white;
+    background-color: blueviolet;
+    text-decoration: none;
+}
 .img-fluid{
     max-width: 70% !important;
 }
