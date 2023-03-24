@@ -16,12 +16,12 @@
 
     <jsp:body>
 
-        <h3>You can log in here</h3>
+        <h3>Du kan logge ind her</h3>
 
         <form action="login" method="post">
-            <label for="username">Username: </label>
+            <label for="username">Mail: </label>
             <input type="text" id="username" name="username"/>
-            <label for="password">Password: </label>
+            <label for="password">Kodeord: </label>
             <input type="password" id="password" name="password"/>
             <input type="submit" class="btn"  value="Log in"/>
         </form>

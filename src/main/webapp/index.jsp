@@ -29,7 +29,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-md-8 col-lg-6">
                         <div class="header">
-                            <h2>Popular Products</h2>
+                            <h2>Populære Produkter</h2>
                         </div>
                     </div>
                 </div>
@@ -85,5 +85,4 @@
             </div>
         </section>
     </jsp:body>
-
 </t:pagetemplate>
