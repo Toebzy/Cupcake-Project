@@ -58,7 +58,6 @@ public class SeKurv extends HttpServlet
                     break;
                 }
             }
-
             List<String> bund = kurv.get(1);
             List<String> bundNavn = new ArrayList<>();
             for (String b: bund)
