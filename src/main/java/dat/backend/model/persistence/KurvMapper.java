@@ -22,32 +22,28 @@ class KurvMapper
                 if (rs.next())
                 {
                     int ordrenummer = rs.getInt("idordrerliste");
-                    String sql2 = "INSERT INTO ordre VALUES (null, ?, ?, ?, ?)";
+                    String sql2 = "INSERT INTO ordre VALUES (null, ?, ?, ?)";
                     PreparedStatement ps2 = connection.prepareStatement(sql2);
                     ps2.setInt(1, bottom);
                     ps2.setInt(2, topping);
-                    ps2.setInt(3, cupcakepris);
-                    ps2.setInt(4, ordrenummer);
+                    ps2.setInt(3, ordrenummer);
                     ps2.executeUpdate();
                 } else
                 {
-                    String sql3 = "INSERT INTO ordrerliste VALUES (null, ?, ?, ?, ?)";
+                    String sql3 = "INSERT INTO ordrerliste VALUES (null, ?, ?)";
                     PreparedStatement ps3 = connection.prepareStatement(sql3);
                     ps3.setInt(1, user.getId());
-                    ps3.setInt(2, 3);
-                    ps3.setInt(3, 40);
-                    ps3.setString(4, "igang");
+                    ps3.setString(2, "igang");
                     ps3.executeUpdate();
                     ResultSet rs1 = ps.executeQuery();
                     if (rs1.next())
                     {
                         int ordrenummer = rs1.getInt("idordrerliste");
-                        String sql2 = "INSERT INTO ordre VALUES (null, ?, ?, ?, ?)";
+                        String sql2 = "INSERT INTO ordre VALUES (null, ?, ?, ?)";
                         PreparedStatement ps2 = connection.prepareStatement(sql2);
                         ps2.setInt(1, bottom);
                         ps2.setInt(2, topping);
-                        ps2.setInt(3, cupcakepris);
-                        ps2.setInt(4, ordrenummer);
+                        ps2.setInt(3, ordrenummer);
                         ps2.executeUpdate();
                     }
                 }
@@ -80,7 +76,7 @@ class KurvMapper
                 {
                     ordrenummer = rs.getString("idordrerliste");
                 }
-                String sql1 = "SELECT ordre.bottom, ordre.topping, ordre.cupcakepris FROM ordre INNER JOIN ordrerliste ON ordrerliste.idordrerliste = ordre.ordrenummer WHERE ordrestatus like 'igang' AND idbruger = ?";
+                String sql1 = "SELECT ordre.bottom, ordre.topping FROM ordre INNER JOIN ordrerliste ON ordrerliste.idordrerliste = ordre.ordrenummer WHERE ordrestatus like 'igang' AND idbruger = ?";
                 PreparedStatement ps1 = connection.prepareStatement(sql1);
                 ps1.setInt(1, user.getId());
                 ResultSet rs1 = ps1.executeQuery();
@@ -89,7 +85,10 @@ class KurvMapper
                 {
                     arraytop.add(rs1.getString("topping"));
                     arraybund.add(rs1.getString("bottom"));
-                    arraypris.add(rs1.getString("cupcakepris"));
+                    int top = fåPrisTop(Integer.parseInt(rs1.getString("topping")), connectionPool);
+                    int bund = fåPrisBund(Integer.parseInt(rs1.getString("bottom")), connectionPool);
+                    String pris = Integer.toString(top + bund);
+                    arraypris.add(pris);
                 }
 
             }
