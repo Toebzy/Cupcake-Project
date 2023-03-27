@@ -89,7 +89,7 @@
                             <div class="part-1">
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Here Product Title</h3>
+                                <h3 class="product-title">Blåbær</h3>
                                 <h4 class="product-des">den smager af citron</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="8" name="top">

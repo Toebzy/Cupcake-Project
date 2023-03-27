@@ -39,7 +39,7 @@
                             <div class="part-1">
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Lemon</h3>
+                                <h3 class="product-title">Citron</h3>
                                 <h4 class="product-des">den smager af citron</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="8" name="top">
@@ -56,7 +56,7 @@
                             <div class="part-1">
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Strawberry</h3>
+                                <h3 class="product-title">Jordbær</h3>
                                 <h4 class="product-des">samme farve som tobias hår</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="6" name="top">
@@ -73,7 +73,7 @@
                             <div class="part-1">
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Blueberry</h3>
+                                <h3 class="product-title">Blåbær</h3>
                                 <h4 class="product-des">den smager af citron</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="2" name="top">
@@ -89,7 +89,7 @@
                             <div class="part-1">
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Rum Raisin</h3>
+                                <h3 class="product-title">Rom Rosin</h3>
                                 <h4 class="product-des">den smager af citron</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="7" name="top">
@@ -121,7 +121,7 @@
                             <div class="part-1">
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Orange</h3>
+                                <h3 class="product-title">Appelsin</h3>
                                 <h4 class="product-des">den smager af citron</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="7" name="top">
@@ -153,7 +153,7 @@
                             <div class="part-1">
                             </div>
                             <div class="part-2">
-                                <h3 class="product-title">Blue Cheese</h3>
+                                <h3 class="product-title">Blåskimmelost</h3>
                                 <h4 class="product-des">seek mental help immediately</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="9" name="top">
