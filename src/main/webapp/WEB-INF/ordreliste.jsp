@@ -91,6 +91,7 @@
                                 <form action="seordre" method="post">
                                     <input hidden value="${emne}" name="ordrenummer">
                                <td> <button class="btn">Se ordre</button></td>
+                               <td> <button class="btn" style ="margin-left: -150px">Fjern </button></td>
                                 </form>
                             </tr>
                         </c:forEach>

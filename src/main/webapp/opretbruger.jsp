@@ -21,7 +21,7 @@ ${requestScope.msg}
     <input type="password" id="kodeord" name="kodeord" placeholder="Kodeord"/>
     <label for="gentagkodeord">Gentag Kodeord: </label>
     <input type="password" id="gentagkodeord" name="gentagkodeord" placeholder="Kodeord"/>
-    <input type="submit"  value="Opret Bruger"/>
+    <input type="submit" class="btn" value="Opret Bruger"/>
 </form>
     </jsp:body>
 </t:pagetemplate>

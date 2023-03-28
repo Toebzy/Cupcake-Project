@@ -79,8 +79,8 @@
     </div>
 </div>
 <form action="betal" method="post">
-din saldo: ${requestScope.saldo} <br>
-total: ${requestScope.totalpris} kr,-
+Din saldo: ${requestScope.saldo} kr <br>
+Total: ${requestScope.totalpris} kr,-
     <input type="hidden" name="totalpris" value="${requestScope.totalpris}">
     <button class="btn">Betal</button>
     ${requestScope.msg}
