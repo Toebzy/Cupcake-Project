@@ -39,7 +39,9 @@
             </select>
             <input hidden value="design" name="jsp">
             <button class="btn">Tilføj til kurv</button>
-
         </form>
+        <br>
+        <img src="images/rcc.jpeg" class="img-fluid img-responsive logo" style="
+        width: 400px"/>
     </jsp:body>
 </t:pagetemplate>
