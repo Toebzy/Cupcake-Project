@@ -106,4 +106,36 @@ class AdminMapper {
         }
         return list;
     }
+    public static void sletOrdrer(int idordrer,ConnectionPool connectionPool) throws SQLException {
+
+        String sql = "DELETE FROM ordre WHERE ordrenummer = ?;";
+        try (Connection connection = connectionPool.getConnection())
+        {
+            try (PreparedStatement ps = connection.prepareStatement(sql))
+            {
+                ps.setInt(1, idordrer);
+                ps.executeUpdate();
+            } catch (SQLException throwables)
+            {
+                throwables.printStackTrace();
+            }
+        }
+    }
+
+    public static void sletOrdreListe(int idordre, ConnectionPool connectionPool) throws SQLException {
+        {
+            String sql = "DELETE FROM ordrerliste WHERE idordrerliste = ?;";
+            try (Connection connection = connectionPool.getConnection())
+            {
+                try (PreparedStatement ps = connection.prepareStatement(sql))
+                {
+                    ps.setInt(1, idordre);
+                    ps.executeUpdate();
+                } catch (SQLException throwables)
+                {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+    }
 }

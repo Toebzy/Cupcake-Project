@@ -81,7 +81,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                         <tr>
-                            <th style="width:70%">Se ordrer</th>
+                            <th style="width:70%">Adminstrer</th>
                         </tr>
                         </thead>
 
@@ -91,6 +91,10 @@
                                 <form action="seordre" method="post">
                                     <input hidden value="${emne}" name="ordrenummer">
                                <td> <button class="btn">Se ordre</button></td>
+                                </form>
+                                <form action="sletordreadmin" method="post">
+                                    <input hidden name="index" value="${varStatus.index}">
+                                    <input hidden name="idordrerliste" value="${requestScope.idordrerliste}">
                                <td> <button class="btn" style ="margin-left: -150px">Fjern </button></td>
                                 </form>
                             </tr>
