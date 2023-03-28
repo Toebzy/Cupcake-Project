@@ -19,7 +19,6 @@ public class Betal extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-
     }
 
     @Override
@@ -36,7 +35,7 @@ public class Betal extends HttpServlet
                 saldo = saldo - totalpris;
                 UserFacade.setSaldo(saldo, user, connectionPool);
                 KurvFacade.færdigOrdre(user, connectionPool);
-                request.getRequestDispatcher("index.jsp").forward(request,response);
+                request.getRequestDispatcher("WEB-INF/done.jsp").forward(request,response);
             }
             else
             {
