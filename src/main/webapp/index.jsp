@@ -39,7 +39,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Chokolade</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Nyd vores choko-bombe, perfekt balance mellem den dybe chokolade-smag og den søde cupcake</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="1" name="top">
                                     <input hidden value="1" name="bund">
@@ -56,7 +56,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Citron</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Nyd den syrlig-koncentrerede citronsmag, sammen med vores tunge bund, som neutraliserer syrligheden</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="8" name="top">
                                     <input hidden value="2" name="bund">
@@ -73,7 +73,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Jordbær</h3>
-                                <h4 class="product-des">samme farve som tobias hår</h4>
+                                <h4 class="product-des">Prøv vores cupcake med jordbær, som er frisk og sød - perfekt til den danske sommer</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="5" name="top">
                                     <input hidden value="2" name="bund">
@@ -90,7 +90,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Blåbær</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Vores blåbær cupcake, indeholder økologiske danske blåbær af højeste kvalitet</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="8" name="top">
                                     <input hidden value="2" name="bund">
