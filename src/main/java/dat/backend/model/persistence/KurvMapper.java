@@ -60,9 +60,11 @@ class KurvMapper
         List<String> arraytop = new ArrayList<>();
         List<String> arraybund = new ArrayList<>();
         List<String> arraypris = new ArrayList<>();
+        List<String> arrayid = new ArrayList<>();
         list.add(arraytop);
         list.add(arraybund);
         list.add(arraypris);
+        list.add(arrayid);
         String ordrenummer;
         String sql = "SELECT * FROM ordrerliste WHERE idbruger = ? AND ordrestatus like 'igang'";
 
@@ -76,7 +78,7 @@ class KurvMapper
                 {
                     ordrenummer = rs.getString("idordrerliste");
                 }
-                String sql1 = "SELECT ordre.bottom, ordre.topping FROM ordre INNER JOIN ordrerliste ON ordrerliste.idordrerliste = ordre.ordrenummer WHERE ordrestatus like 'igang' AND idbruger = ?";
+                String sql1 = "SELECT ordre.bottom, ordre.topping, ordre.idordre FROM ordre INNER JOIN ordrerliste ON ordrerliste.idordrerliste = ordre.ordrenummer WHERE ordrestatus like 'igang' AND idbruger = ?";
                 PreparedStatement ps1 = connection.prepareStatement(sql1);
                 ps1.setInt(1, user.getId());
                 ResultSet rs1 = ps1.executeQuery();
@@ -89,6 +91,7 @@ class KurvMapper
                     int bund = fåPrisBund(Integer.parseInt(rs1.getString("bottom")), connectionPool);
                     String pris = Integer.toString(top + bund);
                     arraypris.add(pris);
+                    arrayid.add((rs1.getString("idordre")));
                 }
 
             }
@@ -150,6 +153,22 @@ class KurvMapper
             try (PreparedStatement ps = connection.prepareStatement(sql))
             {
                 ps.setInt(1, user.getId());
+                ps.executeUpdate();
+            } catch (SQLException throwables)
+            {
+                throwables.printStackTrace();
+            }
+        }
+    }
+
+    public static void sletOrdre(int idordre, ConnectionPool connectionPool) throws SQLException
+    {
+        String sql = "DELETE FROM ordre WHERE idordre = ?;";
+        try (Connection connection = connectionPool.getConnection())
+        {
+            try (PreparedStatement ps = connection.prepareStatement(sql))
+            {
+                ps.setInt(1, idordre);
                 ps.executeUpdate();
             } catch (SQLException throwables)
             {

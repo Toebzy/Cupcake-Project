@@ -33,7 +33,6 @@
                     <th>Top</th>
                 </tr>
                 </thead>
-
                 <c:forEach var="emne" items="${requestScope.top}" varStatus="varStatus">
                     <tr>
                         <td>${emne}</td>
@@ -67,8 +66,14 @@
                 <c:forEach var="emne" items="${requestScope.pris}" varStatus="varStatus">
                     <tr>
                         <td>${emne}</td>
+                        <form action="sletordrekurv" method="post">
+                        <td style="padding: 0px"><button class="btn" style="margin-top: 3px">slet</button></td>
+                            <input hidden name="index" value="${varStatus.index}">
+                            <input hidden name="id" value="${requestScope.id}">
+                        </form>
                     </tr>
                 </c:forEach>
+
             </table>
         </div>
     </div>
