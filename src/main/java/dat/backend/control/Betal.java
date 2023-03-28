@@ -36,7 +36,7 @@ public class Betal extends HttpServlet
                 saldo = saldo - totalpris;
                 UserFacade.setSaldo(saldo, user, connectionPool);
                 KurvFacade.færdigOrdre(user, connectionPool);
-                request.getRequestDispatcher("WEB-INF/welcome.jsp").forward(request,response);
+                request.getRequestDispatcher("index.jsp").forward(request,response);
             }
             else
             {

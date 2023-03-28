@@ -82,7 +82,9 @@ public class SeKurv extends HttpServlet
             {
                 totalpris += Integer.parseInt(l);
             }
+            List<String> id = kurv.get(3);
             int saldo = UserFacade.fåSaldo(user, connectionPool);
+            request.setAttribute("id", id);
             request.setAttribute("totalpris", totalpris);
             request.setAttribute("saldo", saldo);
             request.setAttribute("kurv", kurv);

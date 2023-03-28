@@ -22,4 +22,9 @@ public class KurvFacade
     {
         KurvMapper.færdigOrdre(user, connectionPool);
     }
+
+    public static void sletOrdre(int idordre, ConnectionPool connectionPool) throws SQLException
+    {
+        KurvMapper.sletOrdre(idordre, connectionPool);
+    }
 }
