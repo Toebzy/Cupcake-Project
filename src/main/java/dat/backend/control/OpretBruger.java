@@ -48,8 +48,11 @@ public class OpretBruger extends HttpServlet
                 request.setAttribute("msg", "De to kodeord matcher ikke");
                 request.getRequestDispatcher("opretbruger.jsp").forward(request,response);
             }
-            UserFacade.createUser(mail, kodeord, "0", connectionPool);
-            request.getRequestDispatcher("login.jsp").forward(request,response);
+            if(mail.contains("@") && mail.contains(".") && kodeord.equals(gentagKodeord))
+            {
+                UserFacade.createUser(mail, kodeord, "0", connectionPool);
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
         } catch (DatabaseException e)
         {
             e.printStackTrace();
