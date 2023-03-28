@@ -17,7 +17,7 @@
     <jsp:body>
         <c:if test="${sessionScope.user == null}">
             <section class="hreflinkfix">
-            <p>Du er ikke logget ind endnu. Du kan gøre det her: <a
+            <p class="purple">Du er ikke logget ind endnu. Du kan gøre det her: <a class="btn"
                     href="login.jsp" >Login</a></p>
             </section>
         </c:if>

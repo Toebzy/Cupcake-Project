@@ -9,8 +9,6 @@ body{
     text-decoration:none
 }
 .hreflinkfix p{
-    color: white;
-    background-color: blueviolet;
     text-decoration: none;
 }
 .img-fluid{
@@ -27,7 +25,7 @@ body{
     font-weight:500 !important;
     font-size: 0.8rem !important;
 }
-a{
+.navbar-custom a{
     color: white !important;
 }
 footer{
@@ -35,12 +33,6 @@ footer{
     color: white;
     text-align: center;
 }
-a,
-a:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
 .section-products {
     padding: 80px 0 54px;
 }
@@ -189,4 +181,7 @@ table{
 td, tr{
     width: 100% !important;
 }
-
+.purple a{
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
