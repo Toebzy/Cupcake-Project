@@ -67,7 +67,7 @@
                     <tr>
                         <td>${emne}</td>
                         <form action="sletordrekurv" method="post">
-                        <td style="padding: 0px"><button class="btn" style="margin-top: 3px">Slet Ordre</button></td>
+                        <td style="padding: 0px"><button class="btn" style="margin-top: 3px">Slet</button></td>
                             <input hidden name="index" value="${varStatus.index}">
                             <input hidden name="id" value="${requestScope.id}">
                         </form>
