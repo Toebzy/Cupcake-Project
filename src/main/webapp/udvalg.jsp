@@ -23,7 +23,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Chokolade</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Nyd vores choko-bombe, perfekt balance mellem den dybe chokolade-smag og den søde cupcake</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="1" name="top">
                                     <input hidden value="1" name="bund">
@@ -40,7 +40,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Citron</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Nyd den syrlig-koncentrerede citronsmag, sammen med vores tunge bund, som neutraliserer syrligheden</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="8" name="top">
                                     <input hidden value="2" name="bund">
@@ -57,7 +57,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Jordbær</h3>
-                                <h4 class="product-des">samme farve som tobias hår</h4>
+                                <h4 class="product-des">Prøv vores cupcake med jordbær, som er frisk og sød - perfekt til den danske sommer</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="6" name="top">
                                     <input hidden value="2" name="bund">
@@ -74,7 +74,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Blåbær</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Vores blåbær cupcake, indeholder økologiske danske blåbær af højeste kvalitet</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="2" name="top">
                                     <input hidden value="3" name="bund">
@@ -90,7 +90,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Rom Rosin</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Denne cupcake er perfekt som dessert til en hyggelig voksen-aften, indeholder alkohol</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="7" name="top">
                                     <input hidden value="3" name="bund">
@@ -106,7 +106,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Crispy Chokolade</h3>
-                                <h4 class="product-des">Vi har tabt den på gulvet</h4>
+                                <h4 class="product-des">Hold dig væk fra denne cupcake, den er sammensat af rester fra de andre cupcakes, og er blevet tabt på gulvet</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="4" name="top">
                                     <input hidden value="1" name="bund">
@@ -122,7 +122,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Appelsin</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Appelsin-cupcaken er perfekt til vintertiderne, og eventuelt også til en god jule-dessert</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="7" name="top">
                                     <input hidden value="2" name="bund">
@@ -138,7 +138,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Vanilje Hindbær</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Perfekt balance mellem syrligheden fra hindbæret og sødmen fra vanilje - en klassiker</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="3" name="top">
                                     <input hidden value="2" name="bund">
@@ -154,7 +154,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Blåskimmelost</h3>
-                                <h4 class="product-des">seek mental help immediately</h4>
+                                <h4 class="product-des">Efter vores trust-pilot rates faldt gevaldigt, blev vi nødt til at tænke innovativt</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="9" name="top">
                                     <input hidden value="5" name="bund">
@@ -170,7 +170,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Vanilje Mandel</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Denne cupcake er "the best of both worlds", sød cupcake med mandler, lækkert</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="6" name="top">
                                     <input hidden value="2" name="bund">
@@ -186,7 +186,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Chokolade Hindbær</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Chokolade Hindbær cupcaken er en best-seller, det er en klassiker som alle kender</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="3" name="top">
                                     <input hidden value="1" name="bund">
@@ -202,7 +202,7 @@
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title">Chokolade Jordbær</h3>
-                                <h4 class="product-des">den smager af citron</h4>
+                                <h4 class="product-des">Denne cupcake startede Olsker Cupcakes, den har været på menukortet ligesiden start</h4>
                                 <form action="tilføjtilkurv" method="post">
                                     <input hidden value="5" name="top">
                                     <input hidden value="1" name="bund">
